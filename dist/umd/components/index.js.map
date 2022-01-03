@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../lib/components/index.ts"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;6CAAA,O;;;;;;4CACA,O;;;;;;iDACA,O","sourcesContent":["export { default as Button } from './button';\nexport { default as Table } from './table';\nexport { default as Pagination } from './pagination';\n"],"file":"index.js"}
