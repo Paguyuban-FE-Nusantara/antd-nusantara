@@ -5,12 +5,18 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _components = require("./components");
+var _button = _interopRequireDefault(require("./components/button"));
+
+var _pagination = _interopRequireDefault(require("./components/pagination"));
+
+var _table = _interopRequireDefault(require("./components/table"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _default = {
-  Button: _components.Button,
-  Pagination: _components.Pagination,
-  Table: _components.Table
+  Button: _button.default,
+  Pagination: _pagination.default,
+  Table: _table.default
 };
 exports.default = _default;
 //# sourceMappingURL=index.js.map
