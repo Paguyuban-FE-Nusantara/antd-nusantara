@@ -1,0 +1,9 @@
+/node_modules
+/src
+/public
+/lib
+/script
+package-dev.json
+screenshot_1.png
+package-prod.json
+yarn.lock
