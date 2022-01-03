@@ -1,13 +1,17 @@
 {
-  "name": "antd-nusantara",
+  "name": "@igun997/antd-nusantara",
   "version": "1.0.0",
   "main": "dist/js/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/js/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Paguyuban-FE-Nusantara/antd-nusantara"
+    "url": "git+https://github.com/Paguyuban-FE-Nusantara/antd-nusantara.git"
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -50,9 +54,17 @@
     "fs-extra": "^9.1.0",
     "typescript": "^3.7.7"
   },
-  "author": "Indra Gunanda",
+  "author": "Indra Gunanda <indra.gunanda@gmail.com>",
   "license": "MIT",
   "keywords": [
     "antd nusantara"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/Paguyuban-FE-Nusantara/antd-nusantara/issues"
+  },
+  "homepage": "https://github.com/Paguyuban-FE-Nusantara/antd-nusantara#readme",
+  "description": "ANTD Wrapper ",
+  "directories": {
+    "lib": "lib"
+  }
 }
