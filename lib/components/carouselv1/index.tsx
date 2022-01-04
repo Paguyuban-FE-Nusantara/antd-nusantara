@@ -1,6 +1,7 @@
 import { Carousel, Image, Typography, Space } from 'antd';
 import * as React from 'react';
 import CarouselV1Wrapper from './style';
+import * as React from "react"
 
 export interface Slide {
   image: string;

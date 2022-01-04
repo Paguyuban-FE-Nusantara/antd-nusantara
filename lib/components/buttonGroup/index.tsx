@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import * as React from "react"
 import { Radio, RadioProps } from 'antd';
 import ButtonGroupWrapper from './style';
 

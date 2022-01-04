@@ -4,6 +4,7 @@ import TableWrapper from './style';
 import Table from "../table";
 import Pagination from "../pagination";
 import {IInfoPaging} from "../../interface";
+import * as React from "react"
 
 interface ITableRemoteProps<T extends object> extends TableProps<T> {
   orderingNumber?: number;
