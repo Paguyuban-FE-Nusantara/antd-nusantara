@@ -1,27 +1,81 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(["exports", "antd", "./style", "../table", "../pagination"], factory);
+    define(["exports", "prop-types", "antd", "./style", "../table", "../pagination", "react"], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require("antd"), require("./style"), require("../table"), require("../pagination"));
+    factory(exports, require("prop-types"), require("antd"), require("./style"), require("../table"), require("../pagination"), require("react"));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.antd, global.style, global.table, global.pagination);
+    factory(mod.exports, global.propTypes, global.antd, global.style, global.table, global.pagination, global.react);
     global.undefined = mod.exports;
   }
-})(this, function (exports, _antd, _style, _table, _pagination) {
+})(this, function (exports, _propTypes, _antd, _style, _table, _pagination, _react) {
   "use strict";
 
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
 
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
   var _style2 = _interopRequireDefault(_style);
 
   var _table2 = _interopRequireDefault(_table);
 
   var _pagination2 = _interopRequireDefault(_pagination);
+
+  var React = _interopRequireWildcard(_react);
+
+  function _getRequireWildcardCache(nodeInterop) {
+    if (typeof WeakMap !== "function") return null;
+    var cacheBabelInterop = new WeakMap();
+    var cacheNodeInterop = new WeakMap();
+    return (_getRequireWildcardCache = function (nodeInterop) {
+      return nodeInterop ? cacheNodeInterop : cacheBabelInterop;
+    })(nodeInterop);
+  }
+
+  function _interopRequireWildcard(obj, nodeInterop) {
+    if (!nodeInterop && obj && obj.__esModule) {
+      return obj;
+    }
+
+    if (obj === null || typeof obj !== "object" && typeof obj !== "function") {
+      return {
+        default: obj
+      };
+    }
+
+    var cache = _getRequireWildcardCache(nodeInterop);
+
+    if (cache && cache.has(obj)) {
+      return cache.get(obj);
+    }
+
+    var newObj = {};
+    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+
+    for (var key in obj) {
+      if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
+        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+
+        if (desc && (desc.get || desc.set)) {
+          Object.defineProperty(newObj, key, desc);
+        } else {
+          newObj[key] = obj[key];
+        }
+      }
+    }
+
+    newObj.default = obj;
+
+    if (cache) {
+      cache.set(obj, newObj);
+    }
+
+    return newObj;
+  }
 
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
@@ -142,6 +196,11 @@
     })));
   };
 
+  TableRemote.propTypes = {
+    orderingNumber: _propTypes2.default.number,
+    withNumber: _propTypes2.default.bool,
+    showPagination: _propTypes2.default.bool
+  };
   exports.default = TableRemote;
 });
 //# sourceMappingURL=index.js.map

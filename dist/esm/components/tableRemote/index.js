@@ -1,3 +1,4 @@
+import _pt from "prop-types";
 const _excluded = ["dataSource", "columns", "onPageChange", "onSizeChange", "infoPaging", "withNumber", "showPagination"];
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -10,6 +11,7 @@ import { Col, Row, Select, Space } from 'antd';
 import TableWrapper from './style';
 import Table from "../table";
 import Pagination from "../pagination";
+import * as React from "react";
 const {
   Option
 } = Select;
@@ -67,5 +69,10 @@ const TableRemote = props => {
   })));
 };
 
+TableRemote.propTypes = {
+  orderingNumber: _pt.number,
+  withNumber: _pt.bool,
+  showPagination: _pt.bool
+};
 export default TableRemote;
 //# sourceMappingURL=index.js.map
