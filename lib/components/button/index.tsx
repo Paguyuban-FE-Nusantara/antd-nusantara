@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import * as React from "react"
 import { ButtonProps } from 'antd/lib/button';
 import ButtonWrapper from './style';
 
