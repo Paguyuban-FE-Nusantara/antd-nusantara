@@ -8,11 +8,12 @@
         "es2017",
         "dom"
       ],
-      "module": "commonjs",
+      "module": "ESNext",
       "moduleResolution": "node",
       "skipLibCheck": true,
       "strict": true,
       "strictNullChecks": false,
+      "allowSyntheticDefaultImports": true,
       "target": "es5"
     },
     "include": [
