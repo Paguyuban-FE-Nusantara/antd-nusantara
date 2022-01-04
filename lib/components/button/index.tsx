@@ -1,8 +1,8 @@
-import React,{ FC } from 'react';
+import { FC } from 'react';
 import { ButtonProps } from 'antd/lib/button';
 import ButtonWrapper from './style';
 
-interface MyButtonProps extends ButtonProps {
+export interface MyButtonProps extends ButtonProps {
     color?: 'secondary' | 'primary';
 }
 

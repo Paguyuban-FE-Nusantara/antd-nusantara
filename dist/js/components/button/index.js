@@ -5,10 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
-var _react = _interopRequireDefault(require("react"));
-
 var _style = _interopRequireDefault(require("./style"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -17,15 +13,12 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 var BaseButton = function BaseButton(props) {
   var color = props.color;
-  return /*#__PURE__*/_react.default.createElement(_style.default, _extends({
+  return /*#__PURE__*/React.createElement(_style.default, _extends({
     color: color,
     "data-testid": "required-button"
   }, props));
 };
 
-BaseButton.propTypes = {
-  color: _propTypes.default.oneOf(['secondary', 'primary'])
-};
 var _default = BaseButton;
 exports.default = _default;
 //# sourceMappingURL=index.js.map

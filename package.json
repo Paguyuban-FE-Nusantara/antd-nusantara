@@ -22,19 +22,18 @@
     "ie >= 11"
   ],
   "dependencies": {
-    "@ant-design/icons": "^4.0.0",
-    "antd": "^4.18.0",
     "react": "^17.0.2",
     "styled-components": "^5.3.3"
   },
   "scripts": {
-    "build:lib": "yarn build:babel &&  node ./scripts/copyts.js",
+    "build:lib": "yarn build:babel && yarn build:types && node ./scripts/copyts.js",
     "build:babel": "concurrently \"yarn build:babel:esm && yarn build:babel:umd\" \"yarn build:babel:cjs\"",
     "build:babel:cjs": "cross-env BABEL_ENV=cjs babel --source-maps --extensions \".js,.ts,.tsx\" lib --out-dir dist/js --presets=@babel/env",
     "build:babel:esm": "cross-env BABEL_ENV=esm babel --source-maps --extensions \".js,.ts,.tsx\" lib --out-dir dist/esm",
     "build:babel:umd": "cross-env BABEL_ENV=umd babel --source-maps --extensions \".js\" dist/esm --out-dir dist/umd --plugins=transform-es2015-modules-umd",
+    "build:types": "tsc -p tsconfig.gen-dts.json",
     "clean": "rm -rf dist",
-    "dev": "yarn && yarn build:babel:esm --skip-initial-build --watch --verbose"
+    "dev": "yarn build:types && yarn build:babel:esm --skip-initial-build --watch --verbose"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.4",

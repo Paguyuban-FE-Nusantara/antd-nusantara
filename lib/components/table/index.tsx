@@ -3,7 +3,7 @@ import { Table, TableProps } from 'antd';
 import React from "react"
 import TableWrapper from './style';
 
-interface MyTableProps<T extends object> extends TableProps<T> {
+export interface MyTableProps<T extends object> extends TableProps<T> {
   height?: string;
 }
 

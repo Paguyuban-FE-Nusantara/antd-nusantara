@@ -1,25 +1,21 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(["exports", "prop-types", "react", "./style"], factory);
+    define(["exports", "./style"], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require("prop-types"), require("react"), require("./style"));
+    factory(exports, require("./style"));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.propTypes, global.react, global.style);
+    factory(mod.exports, global.style);
     global.undefined = mod.exports;
   }
-})(this, function (exports, _propTypes, _react, _style) {
+})(this, function (exports, _style) {
   "use strict";
 
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-
-  var _propTypes2 = _interopRequireDefault(_propTypes);
-
-  var _react2 = _interopRequireDefault(_react);
 
   var _style2 = _interopRequireDefault(_style);
 
@@ -51,15 +47,12 @@
     const {
       color
     } = props;
-    return /*#__PURE__*/_react2.default.createElement(_style2.default, _extends({
+    return /*#__PURE__*/React.createElement(_style2.default, _extends({
       color: color,
       "data-testid": "required-button"
     }, props));
   };
 
-  BaseButton.propTypes = {
-    color: _propTypes2.default.oneOf(['secondary', 'primary'])
-  };
   exports.default = BaseButton;
 });
 //# sourceMappingURL=index.js.map

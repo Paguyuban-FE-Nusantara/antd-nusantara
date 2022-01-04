@@ -8,7 +8,7 @@ import {
 } from '@ant-design/icons';
 import PaginationWrapper from './style';
 
-interface IPaginationProps {
+export interface IPaginationProps {
   onPageChange: Function;
   currentPage: number;
   pageSize: number;

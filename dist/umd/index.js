@@ -16,6 +16,7 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
+  exports.Table = exports.Pagination = exports.Button = undefined;
 
   var _button2 = _interopRequireDefault(_button);
 
@@ -29,10 +30,8 @@
     };
   }
 
-  exports.default = {
-    Button: _button2.default,
-    Pagination: _pagination2.default,
-    Table: _table2.default
-  };
+  exports.Button = _button2.default;
+  exports.Pagination = _pagination2.default;
+  exports.Table = _table2.default;
 });
 //# sourceMappingURL=index.js.map
